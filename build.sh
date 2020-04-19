@@ -13,7 +13,4 @@ g++-5 -m32 -shared -o libwrap32ae.so \
 g++-5 -m32 -o test1 wrap32me.cc -L. -l wrap32ae
 strip test1
 
-SAVE_PATH=$LD_LIBRARY_PATH
-export LD_LIBRARY_PARG=.;./test2
-
-LD_LIBRARY_PATH=${SAVE_PATH}
+export LD_LIBRARY_PATH=.;./test2
